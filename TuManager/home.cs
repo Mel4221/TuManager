@@ -20,6 +20,7 @@ namespace TuManager
         {
                InitializeComponent();
             //Get.C(Helper.ConectionString()); // tiene que ser cambiada la base de datos selecionada 
+            //adding acomment
            
         }
 
