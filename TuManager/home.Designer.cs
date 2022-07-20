@@ -98,7 +98,7 @@
             this.SalirBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(882, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(810, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -177,33 +177,32 @@
             // 
             // PanelCliente
             // 
-            this.PanelCliente.Controls.Add(this.PanelProveedor);
             this.PanelCliente.Controls.Add(this.interfasCliente1);
-            this.PanelCliente.Location = new System.Drawing.Point(137, 41);
+            this.PanelCliente.Location = new System.Drawing.Point(221, 69);
             this.PanelCliente.Name = "PanelCliente";
-            this.PanelCliente.Size = new System.Drawing.Size(553, 423);
+            this.PanelCliente.Size = new System.Drawing.Size(322, 339);
             this.PanelCliente.TabIndex = 1;
             // 
             // PanelProveedor
             // 
             this.PanelProveedor.Controls.Add(this.interfasProveedor1);
-            this.PanelProveedor.Location = new System.Drawing.Point(12, 17);
+            this.PanelProveedor.Location = new System.Drawing.Point(218, 69);
             this.PanelProveedor.Name = "PanelProveedor";
-            this.PanelProveedor.Size = new System.Drawing.Size(523, 387);
+            this.PanelProveedor.Size = new System.Drawing.Size(334, 351);
             this.PanelProveedor.TabIndex = 1;
             // 
             // interfasProveedor1
             // 
             this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasProveedor1.Location = new System.Drawing.Point(103, 12);
+            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
             this.interfasProveedor1.Name = "interfasProveedor1";
-            this.interfasProveedor1.Size = new System.Drawing.Size(321, 362);
+            this.interfasProveedor1.Size = new System.Drawing.Size(320, 348);
             this.interfasProveedor1.TabIndex = 0;
             // 
             // interfasCliente1
             // 
             this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasCliente1.Location = new System.Drawing.Point(118, 45);
+            this.interfasCliente1.Location = new System.Drawing.Point(1, 3);
             this.interfasCliente1.Name = "interfasCliente1";
             this.interfasCliente1.Size = new System.Drawing.Size(318, 312);
             this.interfasCliente1.TabIndex = 0;
@@ -213,8 +212,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(882, 576);
+            this.ClientSize = new System.Drawing.Size(810, 503);
             this.Controls.Add(this.PanelCliente);
+            this.Controls.Add(this.PanelProveedor);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

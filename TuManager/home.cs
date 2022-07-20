@@ -19,11 +19,11 @@ namespace TuManager
         public Home()
         {
                InitializeComponent();
-            PanelCliente.Hide();
-            PanelCliente.Hide(); 
+            PanelCliente.Visible = false;
+            PanelProveedor.Visible = false;
             //Get.C(Helper.ConectionString()); // tiene que ser cambiada la base de datos selecionada 
             //adding acomment
-           
+
         }
         private void HideAll()
         {
@@ -63,13 +63,13 @@ namespace TuManager
             {
                 case "Gestión de usuarios":
                     this.HideAll();
-                    PanelCliente.Show(); 
+                    PanelCliente.Visible = true;  
 
                     break;
 
                 case "Gestión de empresas":
                     this.HideAll();
-                    PanelProveedor.Show(); 
+                    PanelProveedor.Visible = true; 
                     break; 
             }
 
