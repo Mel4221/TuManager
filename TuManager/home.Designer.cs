@@ -45,7 +45,13 @@
             this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
+            this.PanelCliente = new System.Windows.Forms.Panel();
+            this.PanelProveedor = new System.Windows.Forms.Panel();
+            this.interfasProveedor1 = new TuManager.InterfasProveedor();
+            this.interfasCliente1 = new TuManager.InterfasCliente();
             this.toolStrip1.SuspendLayout();
+            this.PanelCliente.SuspendLayout();
+            this.PanelProveedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripSeparator1
@@ -110,19 +116,19 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // ReportesBtn
@@ -150,14 +156,14 @@
             this.gestiónDeUsuariosToolStripMenuItem.Name = "gestiónDeUsuariosToolStripMenuItem";
             this.gestiónDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.gestiónDeUsuariosToolStripMenuItem.Text = "Gestión de usuarios";
-            this.gestiónDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeUsuariosToolStripMenuItem_Click);
+            this.gestiónDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.AdministrarGestion);
             // 
             // gestiónDeEmpresasToolStripMenuItem
             // 
             this.gestiónDeEmpresasToolStripMenuItem.Name = "gestiónDeEmpresasToolStripMenuItem";
             this.gestiónDeEmpresasToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.gestiónDeEmpresasToolStripMenuItem.Text = "Gestión de empresas";
-            this.gestiónDeEmpresasToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeEmpresasToolStripMenuItem_Click);
+            this.gestiónDeEmpresasToolStripMenuItem.Click += new System.EventHandler(this.AdministrarGestion);
             // 
             // SalirBtn
             // 
@@ -169,12 +175,46 @@
             this.SalirBtn.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
+            // PanelCliente
+            // 
+            this.PanelCliente.Controls.Add(this.PanelProveedor);
+            this.PanelCliente.Controls.Add(this.interfasCliente1);
+            this.PanelCliente.Location = new System.Drawing.Point(137, 41);
+            this.PanelCliente.Name = "PanelCliente";
+            this.PanelCliente.Size = new System.Drawing.Size(553, 423);
+            this.PanelCliente.TabIndex = 1;
+            // 
+            // PanelProveedor
+            // 
+            this.PanelProveedor.Controls.Add(this.interfasProveedor1);
+            this.PanelProveedor.Location = new System.Drawing.Point(12, 17);
+            this.PanelProveedor.Name = "PanelProveedor";
+            this.PanelProveedor.Size = new System.Drawing.Size(523, 387);
+            this.PanelProveedor.TabIndex = 1;
+            // 
+            // interfasProveedor1
+            // 
+            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasProveedor1.Location = new System.Drawing.Point(103, 12);
+            this.interfasProveedor1.Name = "interfasProveedor1";
+            this.interfasProveedor1.Size = new System.Drawing.Size(321, 362);
+            this.interfasProveedor1.TabIndex = 0;
+            // 
+            // interfasCliente1
+            // 
+            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasCliente1.Location = new System.Drawing.Point(118, 45);
+            this.interfasCliente1.Name = "interfasCliente1";
+            this.interfasCliente1.Size = new System.Drawing.Size(318, 312);
+            this.interfasCliente1.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(882, 576);
+            this.Controls.Add(this.PanelCliente);
             this.Controls.Add(this.toolStrip1);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -183,6 +223,8 @@
             this.Text = "TuManager";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.PanelCliente.ResumeLayout(false);
+            this.PanelProveedor.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +247,10 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.Panel PanelCliente;
+        private InterfasCliente interfasCliente1;
+        private System.Windows.Forms.Panel PanelProveedor;
+        private InterfasProveedor interfasProveedor1;
     }
 }
 
