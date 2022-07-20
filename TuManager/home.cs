@@ -7,16 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading; 
-using QuickTools; 
+using QuickTools;
+using System.Configuration; 
 using System.Windows.Forms;
 
 namespace TuManager
 {
+ 
     public partial class Home : Form
     {
         public Home()
         {
-            InitializeComponent();
+               InitializeComponent();
+            //Get.C(Helper.ConectionString()); // tiene que ser cambiada la base de datos selecionada 
+           
         }
 
         private void SalirBtn_Click(object sender, EventArgs e)
@@ -35,5 +39,6 @@ namespace TuManager
             var app = new RegistrarProveedor();
             app.Show(); 
         }
+        
     }
 }
