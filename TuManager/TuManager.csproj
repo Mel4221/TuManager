@@ -130,6 +130,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="analisisUnicode.txt" />
     <Content Include="lista.txt" />
     <Content Include="setting.ico" />
   </ItemGroup>
