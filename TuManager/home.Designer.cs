@@ -255,9 +255,9 @@
             // ViewReportes
             // 
             this.ViewReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewReportes.Location = new System.Drawing.Point(0, 39);
+            this.ViewReportes.Location = new System.Drawing.Point(0, 33);
             this.ViewReportes.Name = "ViewReportes";
-            this.ViewReportes.Size = new System.Drawing.Size(1024, 400);
+            this.ViewReportes.Size = new System.Drawing.Size(1024, 406);
             this.ViewReportes.TabIndex = 0;
             // 
             // textBox1
@@ -269,6 +269,7 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Codigo";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // textBox2
             // 
@@ -279,6 +280,7 @@
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Nombre De Cliente";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // textBox3
             // 
@@ -289,6 +291,7 @@
             this.textBox3.TabIndex = 3;
             this.textBox3.Text = "Correo";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // textBox4
             // 
@@ -299,6 +302,7 @@
             this.textBox4.TabIndex = 4;
             this.textBox4.Text = "Marca De Dispositivo";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // textBox5
             // 
@@ -309,6 +313,7 @@
             this.textBox5.TabIndex = 5;
             this.textBox5.Text = "Modelo";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // TiempoDeCarga
             // 

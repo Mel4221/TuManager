@@ -83,5 +83,13 @@ namespace TuManager
             
 
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox input = (TextBox)sender;
+            
+            
+
+        }
     }
 }
