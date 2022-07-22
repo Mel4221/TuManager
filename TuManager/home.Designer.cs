@@ -37,30 +37,30 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.AdministracionBtn = new System.Windows.Forms.ToolStripDropDownButton();
-            this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestiónDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
-            this.PanelCliente = new System.Windows.Forms.Panel();
-            this.PanelProveedor = new System.Windows.Forms.Panel();
-            this.interfasCliente1 = new TuManager.InterfasCliente();
-            this.interfasProveedor1 = new TuManager.InterfasProveedor();
-            this.PanelReportes = new System.Windows.Forms.Panel();
             this.OperacionesBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportesBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ViewReportes = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.TiempoDeCarga = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.AdministracionBtn = new System.Windows.Forms.ToolStripDropDownButton();
+            this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
+            this.PanelCliente = new System.Windows.Forms.Panel();
+            this.interfasCliente1 = new TuManager.InterfasCliente();
+            this.PanelProveedor = new System.Windows.Forms.Panel();
+            this.interfasProveedor1 = new TuManager.InterfasProveedor();
+            this.PanelReportes = new System.Windows.Forms.Panel();
             this.ReporteBuscarBtn = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ViewReportes = new System.Windows.Forms.DataGridView();
+            this.TiempoDeCarga = new System.Windows.Forms.Timer(this.components);
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
@@ -109,20 +109,64 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // OperacionesBtn
+            // 
+            this.OperacionesBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventasToolStripMenuItem,
+            this.devolucionesToolStripMenuItem});
+            this.OperacionesBtn.ForeColor = System.Drawing.Color.Black;
+            this.OperacionesBtn.Name = "OperacionesBtn";
+            this.OperacionesBtn.Size = new System.Drawing.Size(86, 22);
+            this.OperacionesBtn.Text = "Operaciones";
+            // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            // 
+            // devolucionesToolStripMenuItem
+            // 
+            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.devolucionesToolStripMenuItem.Text = "Devoluciones";
+            this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
+            // 
+            // ReportesBtn
+            // 
+            this.ReportesBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem1,
+            this.proveedoresToolStripMenuItem1});
+            this.ReportesBtn.Name = "ReportesBtn";
+            this.ReportesBtn.Size = new System.Drawing.Size(66, 22);
+            this.ReportesBtn.Text = "Reportes";
+            // 
+            // clientesToolStripMenuItem1
+            // 
+            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.clientesToolStripMenuItem1.Text = "Clientes";
+            // 
+            // proveedoresToolStripMenuItem1
+            // 
+            this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
+            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.proveedoresToolStripMenuItem1.Text = "Proveedores";
             // 
             // toolStripSeparator4
             // 
@@ -170,14 +214,6 @@
             this.PanelCliente.Size = new System.Drawing.Size(322, 339);
             this.PanelCliente.TabIndex = 1;
             // 
-            // PanelProveedor
-            // 
-            this.PanelProveedor.Controls.Add(this.interfasProveedor1);
-            this.PanelProveedor.Location = new System.Drawing.Point(218, 69);
-            this.PanelProveedor.Name = "PanelProveedor";
-            this.PanelProveedor.Size = new System.Drawing.Size(325, 339);
-            this.PanelProveedor.TabIndex = 1;
-            // 
             // interfasCliente1
             // 
             this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
@@ -185,6 +221,14 @@
             this.interfasCliente1.Name = "interfasCliente1";
             this.interfasCliente1.Size = new System.Drawing.Size(318, 312);
             this.interfasCliente1.TabIndex = 0;
+            // 
+            // PanelProveedor
+            // 
+            this.PanelProveedor.Controls.Add(this.interfasProveedor1);
+            this.PanelProveedor.Location = new System.Drawing.Point(218, 69);
+            this.PanelProveedor.Name = "PanelProveedor";
+            this.PanelProveedor.Size = new System.Drawing.Size(325, 339);
+            this.PanelProveedor.TabIndex = 1;
             // 
             // interfasProveedor1
             // 
@@ -208,101 +252,15 @@
             this.PanelReportes.Size = new System.Drawing.Size(1030, 473);
             this.PanelReportes.TabIndex = 2;
             // 
-            // OperacionesBtn
+            // ReporteBuscarBtn
             // 
-            this.OperacionesBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventasToolStripMenuItem,
-            this.devolucionesToolStripMenuItem});
-            this.OperacionesBtn.ForeColor = System.Drawing.Color.Black;
-            this.OperacionesBtn.Name = "OperacionesBtn";
-            this.OperacionesBtn.Size = new System.Drawing.Size(86, 22);
-            this.OperacionesBtn.Text = "Operaciones";
-            // 
-            // ventasToolStripMenuItem
-            // 
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ventasToolStripMenuItem.Text = "Ventas";
-            // 
-            // devolucionesToolStripMenuItem
-            // 
-            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.devolucionesToolStripMenuItem.Text = "Devoluciones";
-            this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
-            // 
-            // ReportesBtn
-            // 
-            this.ReportesBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem1,
-            this.proveedoresToolStripMenuItem1});
-            this.ReportesBtn.Name = "ReportesBtn";
-            this.ReportesBtn.Size = new System.Drawing.Size(66, 22);
-            this.ReportesBtn.Text = "Reportes";
-            // 
-            // clientesToolStripMenuItem1
-            // 
-            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.clientesToolStripMenuItem1.Text = "Clientes";
-            // 
-            // proveedoresToolStripMenuItem1
-            // 
-            this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
-            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.proveedoresToolStripMenuItem1.Text = "Proveedores";
-            // 
-            // ViewReportes
-            // 
-            this.ViewReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewReportes.Location = new System.Drawing.Point(0, 33);
-            this.ViewReportes.Name = "ViewReportes";
-            this.ViewReportes.Size = new System.Drawing.Size(1024, 406);
-            this.ViewReportes.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 24);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Codigo";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(136, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 24);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Nombre De Cliente";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(296, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 24);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "Correo";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(429, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 24);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "Marca De Dispositivo";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.ReporteBuscarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteBuscarBtn.Location = new System.Drawing.Point(748, 0);
+            this.ReporteBuscarBtn.Name = "ReporteBuscarBtn";
+            this.ReporteBuscarBtn.Size = new System.Drawing.Size(276, 30);
+            this.ReporteBuscarBtn.TabIndex = 6;
+            this.ReporteBuscarBtn.Text = "Buscar";
+            this.ReporteBuscarBtn.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -315,19 +273,61 @@
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(429, 3);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(180, 24);
+            this.textBox4.TabIndex = 4;
+            this.textBox4.Text = "Marca De Dispositivo";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(296, 3);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(127, 24);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.Text = "Correo";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(136, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(154, 24);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Nombre De Cliente";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 24);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Codigo";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            // 
+            // ViewReportes
+            // 
+            this.ViewReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ViewReportes.Location = new System.Drawing.Point(0, 33);
+            this.ViewReportes.Name = "ViewReportes";
+            this.ViewReportes.Size = new System.Drawing.Size(1024, 406);
+            this.ViewReportes.TabIndex = 0;
+            // 
             // TiempoDeCarga
             // 
             this.TiempoDeCarga.Interval = 5000;
-            // 
-            // ReporteBuscarBtn
-            // 
-            this.ReporteBuscarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReporteBuscarBtn.Location = new System.Drawing.Point(748, 0);
-            this.ReporteBuscarBtn.Name = "ReporteBuscarBtn";
-            this.ReporteBuscarBtn.Size = new System.Drawing.Size(276, 30);
-            this.ReporteBuscarBtn.TabIndex = 6;
-            this.ReporteBuscarBtn.Text = "Buscar";
-            this.ReporteBuscarBtn.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
