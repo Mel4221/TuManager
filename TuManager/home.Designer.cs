@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -52,9 +53,18 @@
             this.ReportesBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ViewReportes = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TiempoDeCarga = new System.Windows.Forms.Timer(this.components);
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
+            this.PanelReportes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripSeparator1
@@ -80,7 +90,7 @@
             this.SalirBtn});
             this.TuManagerMenu.Location = new System.Drawing.Point(0, 0);
             this.TuManagerMenu.Name = "TuManagerMenu";
-            this.TuManagerMenu.Size = new System.Drawing.Size(810, 25);
+            this.TuManagerMenu.Size = new System.Drawing.Size(1030, 25);
             this.TuManagerMenu.TabIndex = 0;
             this.TuManagerMenu.Text = "toolStrip1";
             // 
@@ -185,10 +195,17 @@
             // 
             // PanelReportes
             // 
+            this.PanelReportes.Controls.Add(this.textBox5);
+            this.PanelReportes.Controls.Add(this.textBox4);
+            this.PanelReportes.Controls.Add(this.textBox3);
+            this.PanelReportes.Controls.Add(this.textBox2);
+            this.PanelReportes.Controls.Add(this.textBox1);
+            this.PanelReportes.Controls.Add(this.ViewReportes);
             this.PanelReportes.Location = new System.Drawing.Point(0, 28);
             this.PanelReportes.Name = "PanelReportes";
-            this.PanelReportes.Size = new System.Drawing.Size(808, 473);
+            this.PanelReportes.Size = new System.Drawing.Size(1030, 473);
             this.PanelReportes.TabIndex = 2;
+            this.PanelReportes.Visible = false;
             // 
             // OperacionesBtn
             // 
@@ -211,6 +228,7 @@
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
             this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devolucionesToolStripMenuItem.Text = "Devoluciones";
+            this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
             // 
             // ReportesBtn
             // 
@@ -233,12 +251,59 @@
             this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.proveedoresToolStripMenuItem1.Text = "Proveedores";
             // 
+            // ViewReportes
+            // 
+            this.ViewReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ViewReportes.Location = new System.Drawing.Point(3, 60);
+            this.ViewReportes.Name = "ViewReportes";
+            this.ViewReportes.Size = new System.Drawing.Size(1024, 410);
+            this.ViewReportes.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(127, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(136, 34);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(127, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(269, 34);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(127, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(402, 34);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(127, 20);
+            this.textBox4.TabIndex = 4;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(535, 34);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(127, 20);
+            this.textBox5.TabIndex = 5;
+            // 
+            // TiempoDeCarga
+            // 
+            this.TiempoDeCarga.Interval = 5000;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(810, 503);
+            this.ClientSize = new System.Drawing.Size(1030, 503);
             this.Controls.Add(this.PanelReportes);
             this.Controls.Add(this.PanelCliente);
             this.Controls.Add(this.PanelProveedor);
@@ -253,6 +318,9 @@
             this.TuManagerMenu.PerformLayout();
             this.PanelCliente.ResumeLayout(false);
             this.PanelProveedor.ResumeLayout(false);
+            this.PanelReportes.ResumeLayout(false);
+            this.PanelReportes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,6 +350,13 @@
         private System.Windows.Forms.ToolStripDropDownButton ReportesBtn;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem1;
+        private System.Windows.Forms.DataGridView ViewReportes;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Timer TiempoDeCarga;
     }
 }
 

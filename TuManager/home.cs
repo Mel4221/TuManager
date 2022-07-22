@@ -74,5 +74,14 @@ namespace TuManager
             }
 
         }
+
+        private void devolucionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var carga = new Cargando();
+          
+            carga.Show();
+            
+
+        }
     }
 }
