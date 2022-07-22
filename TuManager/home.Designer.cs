@@ -49,18 +49,19 @@
             this.gestiónDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
             this.PanelCliente = new System.Windows.Forms.Panel();
-            this.interfasCliente1 = new TuManager.InterfasCliente();
             this.PanelProveedor = new System.Windows.Forms.Panel();
-            this.interfasProveedor1 = new TuManager.InterfasProveedor();
             this.PanelReportes = new System.Windows.Forms.Panel();
             this.ReporteBuscarBtn = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ModeloBusqueda = new System.Windows.Forms.TextBox();
+            this.MarcaBusqueda = new System.Windows.Forms.TextBox();
+            this.CorreoBusqueda = new System.Windows.Forms.TextBox();
+            this.NombreBusqueda = new System.Windows.Forms.TextBox();
+            this.CodigoBusqueda = new System.Windows.Forms.TextBox();
             this.ViewReportes = new System.Windows.Forms.DataGridView();
             this.TiempoDeCarga = new System.Windows.Forms.Timer(this.components);
+            this.interfasCliente1 = new TuManager.InterfasCliente();
+            this.interfasProveedor1 = new TuManager.InterfasProveedor();
+            this.CerrarReporteBtn = new System.Windows.Forms.Button();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
@@ -137,13 +138,13 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devolucionesToolStripMenuItem.Text = "Devoluciones";
             this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
             // 
@@ -159,13 +160,14 @@
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
+            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // proveedoresToolStripMenuItem1
             // 
             this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
-            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.proveedoresToolStripMenuItem1.Text = "Proveedores";
             // 
             // toolStripSeparator4
@@ -211,16 +213,8 @@
             this.PanelCliente.Controls.Add(this.interfasCliente1);
             this.PanelCliente.Location = new System.Drawing.Point(221, 69);
             this.PanelCliente.Name = "PanelCliente";
-            this.PanelCliente.Size = new System.Drawing.Size(322, 339);
+            this.PanelCliente.Size = new System.Drawing.Size(322, 336);
             this.PanelCliente.TabIndex = 1;
-            // 
-            // interfasCliente1
-            // 
-            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasCliente1.Location = new System.Drawing.Point(1, 3);
-            this.interfasCliente1.Name = "interfasCliente1";
-            this.interfasCliente1.Size = new System.Drawing.Size(318, 312);
-            this.interfasCliente1.TabIndex = 0;
             // 
             // PanelProveedor
             // 
@@ -230,22 +224,15 @@
             this.PanelProveedor.Size = new System.Drawing.Size(325, 339);
             this.PanelProveedor.TabIndex = 1;
             // 
-            // interfasProveedor1
-            // 
-            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
-            this.interfasProveedor1.Name = "interfasProveedor1";
-            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
-            this.interfasProveedor1.TabIndex = 0;
-            // 
             // PanelReportes
             // 
+            this.PanelReportes.Controls.Add(this.CerrarReporteBtn);
             this.PanelReportes.Controls.Add(this.ReporteBuscarBtn);
-            this.PanelReportes.Controls.Add(this.textBox5);
-            this.PanelReportes.Controls.Add(this.textBox4);
-            this.PanelReportes.Controls.Add(this.textBox3);
-            this.PanelReportes.Controls.Add(this.textBox2);
-            this.PanelReportes.Controls.Add(this.textBox1);
+            this.PanelReportes.Controls.Add(this.ModeloBusqueda);
+            this.PanelReportes.Controls.Add(this.MarcaBusqueda);
+            this.PanelReportes.Controls.Add(this.CorreoBusqueda);
+            this.PanelReportes.Controls.Add(this.NombreBusqueda);
+            this.PanelReportes.Controls.Add(this.CodigoBusqueda);
             this.PanelReportes.Controls.Add(this.ViewReportes);
             this.PanelReportes.Location = new System.Drawing.Point(0, 28);
             this.PanelReportes.Name = "PanelReportes";
@@ -257,65 +244,65 @@
             this.ReporteBuscarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReporteBuscarBtn.Location = new System.Drawing.Point(748, 0);
             this.ReporteBuscarBtn.Name = "ReporteBuscarBtn";
-            this.ReporteBuscarBtn.Size = new System.Drawing.Size(276, 30);
+            this.ReporteBuscarBtn.Size = new System.Drawing.Size(120, 30);
             this.ReporteBuscarBtn.TabIndex = 6;
             this.ReporteBuscarBtn.Text = "Buscar";
             this.ReporteBuscarBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // ModeloBusqueda
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(615, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(127, 24);
-            this.textBox5.TabIndex = 5;
-            this.textBox5.Text = "Modelo";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.ModeloBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModeloBusqueda.Location = new System.Drawing.Point(615, 3);
+            this.ModeloBusqueda.Name = "ModeloBusqueda";
+            this.ModeloBusqueda.Size = new System.Drawing.Size(127, 24);
+            this.ModeloBusqueda.TabIndex = 5;
+            this.ModeloBusqueda.Text = "Modelo";
+            this.ModeloBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ModeloBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // textBox4
+            // MarcaBusqueda
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(429, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 24);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "Marca De Dispositivo";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.MarcaBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarcaBusqueda.Location = new System.Drawing.Point(429, 3);
+            this.MarcaBusqueda.Name = "MarcaBusqueda";
+            this.MarcaBusqueda.Size = new System.Drawing.Size(180, 24);
+            this.MarcaBusqueda.TabIndex = 4;
+            this.MarcaBusqueda.Text = "Marca De Dispositivo";
+            this.MarcaBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MarcaBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // textBox3
+            // CorreoBusqueda
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(296, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 24);
-            this.textBox3.TabIndex = 3;
-            this.textBox3.Text = "Correo";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.CorreoBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CorreoBusqueda.Location = new System.Drawing.Point(296, 3);
+            this.CorreoBusqueda.Name = "CorreoBusqueda";
+            this.CorreoBusqueda.Size = new System.Drawing.Size(127, 24);
+            this.CorreoBusqueda.TabIndex = 3;
+            this.CorreoBusqueda.Text = "Correo";
+            this.CorreoBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CorreoBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // textBox2
+            // NombreBusqueda
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(136, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 24);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Nombre De Cliente";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.NombreBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreBusqueda.Location = new System.Drawing.Point(136, 3);
+            this.NombreBusqueda.Name = "NombreBusqueda";
+            this.NombreBusqueda.Size = new System.Drawing.Size(154, 24);
+            this.NombreBusqueda.TabIndex = 2;
+            this.NombreBusqueda.Text = "Nombre De Cliente";
+            this.NombreBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NombreBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
-            // textBox1
+            // CodigoBusqueda
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 24);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Codigo";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.CodigoBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodigoBusqueda.Location = new System.Drawing.Point(3, 3);
+            this.CodigoBusqueda.Name = "CodigoBusqueda";
+            this.CodigoBusqueda.Size = new System.Drawing.Size(127, 24);
+            this.CodigoBusqueda.TabIndex = 1;
+            this.CodigoBusqueda.Text = "Codigo";
+            this.CodigoBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CodigoBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // ViewReportes
             // 
@@ -329,16 +316,45 @@
             // 
             this.TiempoDeCarga.Interval = 5000;
             // 
+            // interfasCliente1
+            // 
+            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasCliente1.Location = new System.Drawing.Point(0, 3);
+            this.interfasCliente1.Name = "interfasCliente1";
+            this.interfasCliente1.Size = new System.Drawing.Size(318, 330);
+            this.interfasCliente1.TabIndex = 0;
+            // 
+            // interfasProveedor1
+            // 
+            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
+            this.interfasProveedor1.Name = "interfasProveedor1";
+            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
+            this.interfasProveedor1.TabIndex = 0;
+            // 
+            // CerrarReporteBtn
+            // 
+            this.CerrarReporteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarReporteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarReporteBtn.ForeColor = System.Drawing.Color.Red;
+            this.CerrarReporteBtn.Location = new System.Drawing.Point(874, 0);
+            this.CerrarReporteBtn.Name = "CerrarReporteBtn";
+            this.CerrarReporteBtn.Size = new System.Drawing.Size(144, 30);
+            this.CerrarReporteBtn.TabIndex = 7;
+            this.CerrarReporteBtn.Text = "Cerrar";
+            this.CerrarReporteBtn.UseVisualStyleBackColor = true;
+            this.CerrarReporteBtn.Click += new System.EventHandler(this.CerrarReporteBtn_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1030, 503);
-            this.Controls.Add(this.PanelReportes);
             this.Controls.Add(this.PanelCliente);
             this.Controls.Add(this.PanelProveedor);
             this.Controls.Add(this.TuManagerMenu);
+            this.Controls.Add(this.PanelReportes);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -382,13 +398,14 @@
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem1;
         private System.Windows.Forms.DataGridView ViewReportes;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ModeloBusqueda;
+        private System.Windows.Forms.TextBox MarcaBusqueda;
+        private System.Windows.Forms.TextBox CorreoBusqueda;
+        private System.Windows.Forms.TextBox NombreBusqueda;
+        private System.Windows.Forms.TextBox CodigoBusqueda;
         private System.Windows.Forms.Timer TiempoDeCarga;
         private System.Windows.Forms.Button ReporteBuscarBtn;
+        private System.Windows.Forms.Button CerrarReporteBtn;
     }
 }
 

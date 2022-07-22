@@ -21,6 +21,8 @@ namespace TuManager
                InitializeComponent();
             PanelCliente.Visible = false;
             PanelProveedor.Visible = false;
+            PanelReportes.Visible = false;
+
             //Get.C(Helper.ConectionString()); // tiene que ser cambiada la base de datos selecionada 
             //adding acomment
 
@@ -90,6 +92,19 @@ namespace TuManager
             
             
 
+        }
+
+     
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.HideAll();
+            PanelReportes.Visible = true; 
+        }
+
+        private void CerrarReporteBtn_Click(object sender, EventArgs e)
+        {
+            PanelReportes.Visible = false; 
         }
     }
 }
