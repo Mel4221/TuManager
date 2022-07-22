@@ -60,6 +60,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.TiempoDeCarga = new System.Windows.Forms.Timer(this.components);
+            this.ReporteBuscarBtn = new System.Windows.Forms.Button();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
@@ -195,6 +196,7 @@
             // 
             // PanelReportes
             // 
+            this.PanelReportes.Controls.Add(this.ReporteBuscarBtn);
             this.PanelReportes.Controls.Add(this.textBox5);
             this.PanelReportes.Controls.Add(this.textBox4);
             this.PanelReportes.Controls.Add(this.textBox3);
@@ -205,7 +207,6 @@
             this.PanelReportes.Name = "PanelReportes";
             this.PanelReportes.Size = new System.Drawing.Size(1030, 473);
             this.PanelReportes.TabIndex = 2;
-            this.PanelReportes.Visible = false;
             // 
             // OperacionesBtn
             // 
@@ -254,49 +255,74 @@
             // ViewReportes
             // 
             this.ViewReportes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewReportes.Location = new System.Drawing.Point(3, 60);
+            this.ViewReportes.Location = new System.Drawing.Point(0, 39);
             this.ViewReportes.Name = "ViewReportes";
-            this.ViewReportes.Size = new System.Drawing.Size(1024, 410);
+            this.ViewReportes.Size = new System.Drawing.Size(1024, 400);
             this.ViewReportes.TabIndex = 0;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 34);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 20);
+            this.textBox1.Size = new System.Drawing.Size(127, 24);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Codigo";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 34);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(136, 3);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(127, 20);
+            this.textBox2.Size = new System.Drawing.Size(154, 24);
             this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Nombre De Cliente";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(269, 34);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(296, 3);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 20);
+            this.textBox3.Size = new System.Drawing.Size(127, 24);
             this.textBox3.TabIndex = 3;
+            this.textBox3.Text = "Correo";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(402, 34);
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(429, 3);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(127, 20);
+            this.textBox4.Size = new System.Drawing.Size(180, 24);
             this.textBox4.TabIndex = 4;
+            this.textBox4.Text = "Marca De Dispositivo";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(535, 34);
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(615, 3);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(127, 20);
+            this.textBox5.Size = new System.Drawing.Size(127, 24);
             this.textBox5.TabIndex = 5;
+            this.textBox5.Text = "Modelo";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TiempoDeCarga
             // 
             this.TiempoDeCarga.Interval = 5000;
+            // 
+            // ReporteBuscarBtn
+            // 
+            this.ReporteBuscarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReporteBuscarBtn.Location = new System.Drawing.Point(748, 0);
+            this.ReporteBuscarBtn.Name = "ReporteBuscarBtn";
+            this.ReporteBuscarBtn.Size = new System.Drawing.Size(276, 30);
+            this.ReporteBuscarBtn.TabIndex = 6;
+            this.ReporteBuscarBtn.Text = "Buscar";
+            this.ReporteBuscarBtn.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -357,6 +383,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Timer TiempoDeCarga;
+        private System.Windows.Forms.Button ReporteBuscarBtn;
     }
 }
 
