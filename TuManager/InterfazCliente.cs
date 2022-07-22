@@ -18,6 +18,9 @@ namespace TuManager
             InitializeComponent();
         }
 
-       
+        private void CancelarRegistro_Click(object sender, EventArgs e)
+        {
+            Parent.Visible = false; 
+        }
     }
 }

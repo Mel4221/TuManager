@@ -17,10 +17,9 @@ namespace TuManager
             InitializeComponent();
         }
 
-        private void SerrarRegistro(object sender, EventArgs e)
+        private void CancelarRegistro_Click(object sender, EventArgs e)
         {
-            // this visisble will be a better aproauch 
-            this.Visible = false; 
+            Parent.Visible = false; 
         }
     }
 }

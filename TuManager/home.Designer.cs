@@ -34,7 +34,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ConsultasBtn = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.TuManagerMenu = new System.Windows.Forms.ToolStrip();
             this.MantenimientoBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,9 +47,10 @@
             this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
             this.PanelCliente = new System.Windows.Forms.Panel();
             this.PanelProveedor = new System.Windows.Forms.Panel();
-            this.interfasProveedor1 = new TuManager.InterfasProveedor();
             this.interfasCliente1 = new TuManager.InterfasCliente();
-            this.toolStrip1.SuspendLayout();
+            this.interfasProveedor1 = new TuManager.InterfasProveedor();
+            this.PanelReportes = new System.Windows.Forms.Panel();
+            this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
             this.SuspendLayout();
@@ -83,9 +84,9 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStrip1
+            // TuManagerMenu
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TuManagerMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MantenimientoBtn,
             this.toolStripSeparator1,
             this.OperacionesBtn,
@@ -96,11 +97,11 @@
             this.toolStripSeparator4,
             this.AdministracionBtn,
             this.SalirBtn});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(810, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.TuManagerMenu.Location = new System.Drawing.Point(0, 0);
+            this.TuManagerMenu.Name = "TuManagerMenu";
+            this.TuManagerMenu.Size = new System.Drawing.Size(810, 25);
+            this.TuManagerMenu.TabIndex = 0;
+            this.TuManagerMenu.Text = "toolStrip1";
             // 
             // MantenimientoBtn
             // 
@@ -116,19 +117,19 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // ReportesBtn
@@ -188,16 +189,8 @@
             this.PanelProveedor.Controls.Add(this.interfasProveedor1);
             this.PanelProveedor.Location = new System.Drawing.Point(218, 69);
             this.PanelProveedor.Name = "PanelProveedor";
-            this.PanelProveedor.Size = new System.Drawing.Size(334, 351);
+            this.PanelProveedor.Size = new System.Drawing.Size(325, 339);
             this.PanelProveedor.TabIndex = 1;
-            // 
-            // interfasProveedor1
-            // 
-            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
-            this.interfasProveedor1.Name = "interfasProveedor1";
-            this.interfasProveedor1.Size = new System.Drawing.Size(320, 348);
-            this.interfasProveedor1.TabIndex = 0;
             // 
             // interfasCliente1
             // 
@@ -207,22 +200,38 @@
             this.interfasCliente1.Size = new System.Drawing.Size(318, 312);
             this.interfasCliente1.TabIndex = 0;
             // 
+            // interfasProveedor1
+            // 
+            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
+            this.interfasProveedor1.Name = "interfasProveedor1";
+            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
+            this.interfasProveedor1.TabIndex = 0;
+            // 
+            // PanelReportes
+            // 
+            this.PanelReportes.Location = new System.Drawing.Point(0, 28);
+            this.PanelReportes.Name = "PanelReportes";
+            this.PanelReportes.Size = new System.Drawing.Size(808, 473);
+            this.PanelReportes.TabIndex = 2;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(810, 503);
+            this.Controls.Add(this.PanelReportes);
             this.Controls.Add(this.PanelCliente);
             this.Controls.Add(this.PanelProveedor);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.TuManagerMenu);
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TuManager";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.TuManagerMenu.ResumeLayout(false);
+            this.TuManagerMenu.PerformLayout();
             this.PanelCliente.ResumeLayout(false);
             this.PanelProveedor.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -236,7 +245,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripLabel ConsultasBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip TuManagerMenu;
         private System.Windows.Forms.ToolStripLabel ReportesBtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripDropDownButton AdministracionBtn;
@@ -247,10 +256,11 @@
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.Panel PanelCliente;
         private InterfasCliente interfasCliente1;
-        private System.Windows.Forms.Panel PanelProveedor;
         private InterfasProveedor interfasProveedor1;
+        public System.Windows.Forms.Panel PanelCliente;
+        public System.Windows.Forms.Panel PanelProveedor;
+        private System.Windows.Forms.Panel PanelReportes;
     }
 }
 

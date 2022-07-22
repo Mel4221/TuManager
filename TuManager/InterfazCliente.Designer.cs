@@ -133,6 +133,7 @@
             this.CancelarRegistro.TabIndex = 8;
             this.CancelarRegistro.Text = "Cancelar Registro";
             this.CancelarRegistro.UseVisualStyleBackColor = false;
+            this.CancelarRegistro.Click += new System.EventHandler(this.CancelarRegistro_Click);
             // 
             // InterfasCliente
             // 

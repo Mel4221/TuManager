@@ -51,6 +51,7 @@
             this.CancelarRegistro.TabIndex = 17;
             this.CancelarRegistro.Text = "Cancelar Registro";
             this.CancelarRegistro.UseVisualStyleBackColor = false;
+            this.CancelarRegistro.Click += new System.EventHandler(this.CancelarRegistro_Click);
             // 
             // RegistrarClienteBtn
             // 
