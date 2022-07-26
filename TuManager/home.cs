@@ -23,10 +23,14 @@ namespace TuManager
             ///<summary>
             /// Esta area sierra todos los paneles cuando son inicializados 
             /// </summary>
+         //   this.CambiaFormatoDeFecha(); // no funciono como esperava 
             PanelCliente.Visible = false;
             PanelProveedor.Visible = false;
             PanelReportesClientes.Visible = false;
             PanelReporteProveedor.Visible = false;
+            PanelOperacionesVentas.Visible = false;
+            PanelOperacionesDevoluciones.Visible = false; 
+
 
             //Get.C(Helper.ConectionString()); // tiene que ser cambiada la base de datos selecionada 
             //adding acomment
@@ -82,12 +86,17 @@ namespace TuManager
 
         }
 
-        private void devolucionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void devolucionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var carga = new Cargando();
           
+        
             carga.Show();
+            await Task.Delay(2000);
             
+            carga.Close();
+            this.HideAll(); 
+            PanelOperacionesDevoluciones.Visible = true;    
 
         }
 
@@ -122,5 +131,43 @@ namespace TuManager
         {
             PanelReporteProveedor.Visible = true; 
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.HideAll();
+            PanelOperacionesVentas.Visible = true; 
+
+        }
+
+        private void CerrarVentasBtn_Click(object sender, EventArgs e)
+        {
+            this.HideAll(); 
+        }
+
+        private void CerrarDevolucionesBtn_Click(object sender, EventArgs e)
+        {
+            this.HideAll(); 
+        }
+
+        /*
+        private void CambiaFormatoDeFecha()
+        {
+            // Create a new DateTimePicker control and initialize it.
+            DateTimePicker dateTimePicker1 = new DateTimePicker();
+
+            // Set the MinDate and MaxDate.
+            dateTimePicker1.MinDate = new DateTime(2022, 1, 1);
+            dateTimePicker1.MaxDate = DateTime.Today;
+
+            // Set the CustomFormat string.
+            dateTimePicker1.CustomFormat = "dd-MMM-yyyy";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+
+            // Show the CheckBox and display the control as an up-down control.
+            dateTimePicker1.ShowCheckBox = true;
+            dateTimePicker1.ShowUpDown = true;
+            this.Controls.Add(dateTimePicker1); 
+        }
+        */
     }
 }

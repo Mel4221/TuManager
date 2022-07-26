@@ -70,6 +70,17 @@
             this.ReportesProveedor = new System.Windows.Forms.DataGridView();
             this.CerrarReportesPBtn = new System.Windows.Forms.Button();
             this.BuscarReportePBtn = new System.Windows.Forms.Button();
+            this.PanelOperacionesVentas = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CargarVentas = new System.Windows.Forms.Button();
+            this.PanelOperacionesDevoluciones = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.CargarDevolucionesBtn = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.CerrarDevolucionesBtn = new System.Windows.Forms.Button();
+            this.CerrarVentasBtn = new System.Windows.Forms.Button();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
@@ -77,6 +88,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).BeginInit();
             this.PanelReporteProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesProveedor)).BeginInit();
+            this.PanelOperacionesVentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.PanelOperacionesDevoluciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripSeparator1
@@ -120,19 +135,19 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clientesToolStripMenuItem.Text = "Clientes";
             // 
             // OperacionesBtn
@@ -148,13 +163,14 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.devolucionesToolStripMenuItem.Text = "Devoluciones";
             this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
             // 
@@ -358,9 +374,9 @@
             // 
             // PanelReporteProveedor
             // 
+            this.PanelReporteProveedor.Controls.Add(this.ReportesProveedor);
             this.PanelReporteProveedor.Controls.Add(this.BuscarReportePBtn);
             this.PanelReporteProveedor.Controls.Add(this.CerrarReportesPBtn);
-            this.PanelReporteProveedor.Controls.Add(this.ReportesProveedor);
             this.PanelReporteProveedor.Controls.Add(this.textBox3);
             this.PanelReporteProveedor.Controls.Add(this.textBox2);
             this.PanelReporteProveedor.Controls.Add(this.textBox1);
@@ -441,17 +457,116 @@
             this.BuscarReportePBtn.Text = "Buscar";
             this.BuscarReportePBtn.UseVisualStyleBackColor = true;
             // 
+            // PanelOperacionesVentas
+            // 
+            this.PanelOperacionesVentas.Controls.Add(this.CerrarVentasBtn);
+            this.PanelOperacionesVentas.Controls.Add(this.CargarVentas);
+            this.PanelOperacionesVentas.Controls.Add(this.dataGridView1);
+            this.PanelOperacionesVentas.Controls.Add(this.dateTimePicker1);
+            this.PanelOperacionesVentas.Location = new System.Drawing.Point(3, 28);
+            this.PanelOperacionesVentas.Name = "PanelOperacionesVentas";
+            this.PanelOperacionesVentas.Size = new System.Drawing.Size(1024, 457);
+            this.PanelOperacionesVentas.TabIndex = 10;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(315, 18);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 54);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1024, 400);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // CargarVentas
+            // 
+            this.CargarVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CargarVentas.Location = new System.Drawing.Point(521, 12);
+            this.CargarVentas.Name = "CargarVentas";
+            this.CargarVentas.Size = new System.Drawing.Size(108, 36);
+            this.CargarVentas.TabIndex = 2;
+            this.CargarVentas.Text = "Cargar Ventas";
+            this.CargarVentas.UseVisualStyleBackColor = true;
+            // 
+            // PanelOperacionesDevoluciones
+            // 
+            this.PanelOperacionesDevoluciones.Controls.Add(this.CerrarDevolucionesBtn);
+            this.PanelOperacionesDevoluciones.Controls.Add(this.CargarDevolucionesBtn);
+            this.PanelOperacionesDevoluciones.Controls.Add(this.dateTimePicker2);
+            this.PanelOperacionesDevoluciones.Controls.Add(this.dataGridView2);
+            this.PanelOperacionesDevoluciones.Location = new System.Drawing.Point(0, 28);
+            this.PanelOperacionesDevoluciones.Name = "PanelOperacionesDevoluciones";
+            this.PanelOperacionesDevoluciones.Size = new System.Drawing.Size(1024, 426);
+            this.PanelOperacionesDevoluciones.TabIndex = 3;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 33);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(1018, 449);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(277, 7);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 1;
+            // 
+            // CargarDevolucionesBtn
+            // 
+            this.CargarDevolucionesBtn.Location = new System.Drawing.Point(483, 5);
+            this.CargarDevolucionesBtn.Name = "CargarDevolucionesBtn";
+            this.CargarDevolucionesBtn.Size = new System.Drawing.Size(149, 23);
+            this.CargarDevolucionesBtn.TabIndex = 2;
+            this.CargarDevolucionesBtn.Text = "Cargar Devoluciones";
+            this.CargarDevolucionesBtn.UseVisualStyleBackColor = true;
+            // 
+            // CerrarDevolucionesBtn
+            // 
+            this.CerrarDevolucionesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarDevolucionesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarDevolucionesBtn.ForeColor = System.Drawing.Color.Red;
+            this.CerrarDevolucionesBtn.Location = new System.Drawing.Point(650, 3);
+            this.CerrarDevolucionesBtn.Name = "CerrarDevolucionesBtn";
+            this.CerrarDevolucionesBtn.Size = new System.Drawing.Size(113, 30);
+            this.CerrarDevolucionesBtn.TabIndex = 9;
+            this.CerrarDevolucionesBtn.Text = "Cerrar";
+            this.CerrarDevolucionesBtn.UseVisualStyleBackColor = true;
+            this.CerrarDevolucionesBtn.Click += new System.EventHandler(this.CerrarDevolucionesBtn_Click);
+            // 
+            // CerrarVentasBtn
+            // 
+            this.CerrarVentasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarVentasBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarVentasBtn.ForeColor = System.Drawing.Color.Red;
+            this.CerrarVentasBtn.Location = new System.Drawing.Point(675, 14);
+            this.CerrarVentasBtn.Name = "CerrarVentasBtn";
+            this.CerrarVentasBtn.Size = new System.Drawing.Size(113, 30);
+            this.CerrarVentasBtn.TabIndex = 9;
+            this.CerrarVentasBtn.Text = "Cerrar";
+            this.CerrarVentasBtn.UseVisualStyleBackColor = true;
+            this.CerrarVentasBtn.Click += new System.EventHandler(this.CerrarVentasBtn_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(1030, 485);
-            this.Controls.Add(this.PanelReporteProveedor);
             this.Controls.Add(this.PanelCliente);
             this.Controls.Add(this.PanelProveedor);
             this.Controls.Add(this.TuManagerMenu);
+            this.Controls.Add(this.PanelReporteProveedor);
+            this.Controls.Add(this.PanelOperacionesVentas);
             this.Controls.Add(this.PanelReportesClientes);
+            this.Controls.Add(this.PanelOperacionesDevoluciones);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -468,6 +583,10 @@
             this.PanelReporteProveedor.ResumeLayout(false);
             this.PanelReporteProveedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesProveedor)).EndInit();
+            this.PanelOperacionesVentas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.PanelOperacionesDevoluciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,6 +633,17 @@
         private System.Windows.Forms.TextBox NombreProveedor;
         private System.Windows.Forms.Button CerrarReportesPBtn;
         private System.Windows.Forms.Button BuscarReportePBtn;
+        private System.Windows.Forms.Panel PanelOperacionesVentas;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button CargarVentas;
+        private System.Windows.Forms.Panel PanelOperacionesDevoluciones;
+        private System.Windows.Forms.Button CargarDevolucionesBtn;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button CerrarDevolucionesBtn;
+        private System.Windows.Forms.Button CerrarVentasBtn;
     }
 }
 
