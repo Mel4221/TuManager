@@ -29,7 +29,9 @@ namespace TuManager
             PanelReportesClientes.Visible = false;
             PanelReporteProveedor.Visible = false;
             PanelOperacionesVentas.Visible = false;
-            PanelOperacionesDevoluciones.Visible = false; 
+            PanelOperacionesDevoluciones.Visible = false;
+            PanelProductos.Visible = false;
+            InventarioProveedor.Visible = false;
 
 
             //Get.C(Helper.ConectionString()); // tiene que ser cambiada la base de datos selecionada 
@@ -129,6 +131,7 @@ namespace TuManager
 
         private void proveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            this.HideAll(); 
             PanelReporteProveedor.Visible = true; 
         }
 
@@ -145,6 +148,35 @@ namespace TuManager
         }
 
         private void CerrarDevolucionesBtn_Click(object sender, EventArgs e)
+        {
+            this.HideAll(); 
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.HideAll();
+            PanelProductos.Visible = true; 
+
+        }
+
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.HideAll();
+            InventarioProveedor.Visible = true; 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.HideAll(); 
+        }
+
+        private void CerrarInventarioProducto_Click(object sender, EventArgs e)
+        {
+
+            this.HideAll(); 
+        }
+
+        private void CerrarSuplidoresBtn_Click(object sender, EventArgs e)
         {
             this.HideAll(); 
         }
