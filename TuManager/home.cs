@@ -18,10 +18,15 @@ namespace TuManager
     {
         public Home()
         {
-               InitializeComponent();
+
+            InitializeComponent();
+            ///<summary>
+            /// Esta area sierra todos los paneles cuando son inicializados 
+            /// </summary>
             PanelCliente.Visible = false;
             PanelProveedor.Visible = false;
             PanelReportesClientes.Visible = false;
+            PanelReporteProveedor.Visible = false;
 
             //Get.C(Helper.ConectionString()); // tiene que ser cambiada la base de datos selecionada 
             //adding acomment
@@ -105,6 +110,17 @@ namespace TuManager
         private void CerrarReporteBtn_Click(object sender, EventArgs e)
         {
             PanelReportesClientes.Visible = false; 
+        }
+
+        private void CerrarReportesPBtn_Click(object sender, EventArgs e)
+        {
+            this.HideAll(); 
+
+        }
+
+        private void proveedoresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PanelReporteProveedor.Visible = true; 
         }
     }
 }

@@ -67,14 +67,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ReportesProveedor = new System.Windows.Forms.DataGridView();
+            this.CerrarReportesPBtn = new System.Windows.Forms.Button();
+            this.BuscarReportePBtn = new System.Windows.Forms.Button();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
             this.PanelReportesClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).BeginInit();
             this.PanelReporteProveedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportesProveedor)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripSeparator1
@@ -177,6 +179,7 @@
             this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
             this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.proveedoresToolStripMenuItem1.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem1.Click += new System.EventHandler(this.proveedoresToolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 
@@ -355,7 +358,9 @@
             // 
             // PanelReporteProveedor
             // 
-            this.PanelReporteProveedor.Controls.Add(this.dataGridView1);
+            this.PanelReporteProveedor.Controls.Add(this.BuscarReportePBtn);
+            this.PanelReporteProveedor.Controls.Add(this.CerrarReportesPBtn);
+            this.PanelReporteProveedor.Controls.Add(this.ReportesProveedor);
             this.PanelReporteProveedor.Controls.Add(this.textBox3);
             this.PanelReporteProveedor.Controls.Add(this.textBox2);
             this.PanelReporteProveedor.Controls.Add(this.textBox1);
@@ -405,13 +410,36 @@
             this.textBox3.Text = "Correo";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dataGridView1
+            // ReportesProveedor
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1021, 424);
-            this.dataGridView1.TabIndex = 4;
+            this.ReportesProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReportesProveedor.Location = new System.Drawing.Point(3, 33);
+            this.ReportesProveedor.Name = "ReportesProveedor";
+            this.ReportesProveedor.Size = new System.Drawing.Size(1021, 424);
+            this.ReportesProveedor.TabIndex = 4;
+            // 
+            // CerrarReportesPBtn
+            // 
+            this.CerrarReportesPBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarReportesPBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarReportesPBtn.ForeColor = System.Drawing.Color.Red;
+            this.CerrarReportesPBtn.Location = new System.Drawing.Point(905, 0);
+            this.CerrarReportesPBtn.Name = "CerrarReportesPBtn";
+            this.CerrarReportesPBtn.Size = new System.Drawing.Size(113, 30);
+            this.CerrarReportesPBtn.TabIndex = 8;
+            this.CerrarReportesPBtn.Text = "Cerrar";
+            this.CerrarReportesPBtn.UseVisualStyleBackColor = true;
+            this.CerrarReportesPBtn.Click += new System.EventHandler(this.CerrarReportesPBtn_Click);
+            // 
+            // BuscarReportePBtn
+            // 
+            this.BuscarReportePBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarReportePBtn.Location = new System.Drawing.Point(780, 3);
+            this.BuscarReportePBtn.Name = "BuscarReportePBtn";
+            this.BuscarReportePBtn.Size = new System.Drawing.Size(101, 25);
+            this.BuscarReportePBtn.TabIndex = 9;
+            this.BuscarReportePBtn.Text = "Buscar";
+            this.BuscarReportePBtn.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
@@ -439,7 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).EndInit();
             this.PanelReporteProveedor.ResumeLayout(false);
             this.PanelReporteProveedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportesProveedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,11 +507,13 @@
         private System.Windows.Forms.Button ReporteBuscarBtn;
         private System.Windows.Forms.Button CerrarReporteBtn;
         private System.Windows.Forms.Panel PanelReporteProveedor;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ReportesProveedor;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox NombreProveedor;
+        private System.Windows.Forms.Button CerrarReportesPBtn;
+        private System.Windows.Forms.Button BuscarReportePBtn;
     }
 }
 
