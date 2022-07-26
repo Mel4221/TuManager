@@ -20,6 +20,9 @@ namespace TuManager
         {
 
             InitializeComponent();
+
+             
+
             ///<summary>
             /// Esta area sierra todos los paneles cuando son inicializados 
             /// </summary>
@@ -87,17 +90,18 @@ namespace TuManager
             }
 
         }
-
+        
         private async void devolucionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var carga = new Cargando();
-          
-        
+
+
             carga.Show();
             await Task.Delay(2000);
-            
+
             carga.Close();
-            this.HideAll(); 
+            this.HideAll();
+
             PanelOperacionesDevoluciones.Visible = true;    
 
         }
