@@ -49,8 +49,11 @@
             this.gestiónDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
             this.PanelCliente = new System.Windows.Forms.Panel();
+            this.interfasCliente1 = new TuManager.InterfasCliente();
             this.PanelProveedor = new System.Windows.Forms.Panel();
-            this.PanelReportes = new System.Windows.Forms.Panel();
+            this.interfasProveedor1 = new TuManager.InterfasProveedor();
+            this.PanelReportesClientes = new System.Windows.Forms.Panel();
+            this.CerrarReporteBtn = new System.Windows.Forms.Button();
             this.ReporteBuscarBtn = new System.Windows.Forms.Button();
             this.ModeloBusqueda = new System.Windows.Forms.TextBox();
             this.MarcaBusqueda = new System.Windows.Forms.TextBox();
@@ -59,14 +62,19 @@
             this.CodigoBusqueda = new System.Windows.Forms.TextBox();
             this.ViewReportes = new System.Windows.Forms.DataGridView();
             this.TiempoDeCarga = new System.Windows.Forms.Timer(this.components);
-            this.interfasCliente1 = new TuManager.InterfasCliente();
-            this.interfasProveedor1 = new TuManager.InterfasProveedor();
-            this.CerrarReporteBtn = new System.Windows.Forms.Button();
+            this.PanelReporteProveedor = new System.Windows.Forms.Panel();
+            this.NombreProveedor = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
-            this.PanelReportes.SuspendLayout();
+            this.PanelReportesClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).BeginInit();
+            this.PanelReporteProveedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripSeparator1
@@ -138,13 +146,13 @@
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // devolucionesToolStripMenuItem
             // 
             this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.devolucionesToolStripMenuItem.Text = "Devoluciones";
             this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
             // 
@@ -216,6 +224,14 @@
             this.PanelCliente.Size = new System.Drawing.Size(322, 336);
             this.PanelCliente.TabIndex = 1;
             // 
+            // interfasCliente1
+            // 
+            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasCliente1.Location = new System.Drawing.Point(0, 3);
+            this.interfasCliente1.Name = "interfasCliente1";
+            this.interfasCliente1.Size = new System.Drawing.Size(318, 330);
+            this.interfasCliente1.TabIndex = 0;
+            // 
             // PanelProveedor
             // 
             this.PanelProveedor.Controls.Add(this.interfasProveedor1);
@@ -224,20 +240,41 @@
             this.PanelProveedor.Size = new System.Drawing.Size(325, 339);
             this.PanelProveedor.TabIndex = 1;
             // 
-            // PanelReportes
+            // interfasProveedor1
             // 
-            this.PanelReportes.Controls.Add(this.CerrarReporteBtn);
-            this.PanelReportes.Controls.Add(this.ReporteBuscarBtn);
-            this.PanelReportes.Controls.Add(this.ModeloBusqueda);
-            this.PanelReportes.Controls.Add(this.MarcaBusqueda);
-            this.PanelReportes.Controls.Add(this.CorreoBusqueda);
-            this.PanelReportes.Controls.Add(this.NombreBusqueda);
-            this.PanelReportes.Controls.Add(this.CodigoBusqueda);
-            this.PanelReportes.Controls.Add(this.ViewReportes);
-            this.PanelReportes.Location = new System.Drawing.Point(0, 28);
-            this.PanelReportes.Name = "PanelReportes";
-            this.PanelReportes.Size = new System.Drawing.Size(1030, 473);
-            this.PanelReportes.TabIndex = 2;
+            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
+            this.interfasProveedor1.Name = "interfasProveedor1";
+            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
+            this.interfasProveedor1.TabIndex = 0;
+            // 
+            // PanelReportesClientes
+            // 
+            this.PanelReportesClientes.Controls.Add(this.CerrarReporteBtn);
+            this.PanelReportesClientes.Controls.Add(this.ReporteBuscarBtn);
+            this.PanelReportesClientes.Controls.Add(this.ModeloBusqueda);
+            this.PanelReportesClientes.Controls.Add(this.MarcaBusqueda);
+            this.PanelReportesClientes.Controls.Add(this.CorreoBusqueda);
+            this.PanelReportesClientes.Controls.Add(this.NombreBusqueda);
+            this.PanelReportesClientes.Controls.Add(this.CodigoBusqueda);
+            this.PanelReportesClientes.Controls.Add(this.ViewReportes);
+            this.PanelReportesClientes.Location = new System.Drawing.Point(0, 28);
+            this.PanelReportesClientes.Name = "PanelReportesClientes";
+            this.PanelReportesClientes.Size = new System.Drawing.Size(1030, 463);
+            this.PanelReportesClientes.TabIndex = 2;
+            // 
+            // CerrarReporteBtn
+            // 
+            this.CerrarReporteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarReporteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarReporteBtn.ForeColor = System.Drawing.Color.Red;
+            this.CerrarReporteBtn.Location = new System.Drawing.Point(874, 0);
+            this.CerrarReporteBtn.Name = "CerrarReporteBtn";
+            this.CerrarReporteBtn.Size = new System.Drawing.Size(144, 30);
+            this.CerrarReporteBtn.TabIndex = 7;
+            this.CerrarReporteBtn.Text = "Cerrar";
+            this.CerrarReporteBtn.UseVisualStyleBackColor = true;
+            this.CerrarReporteBtn.Click += new System.EventHandler(this.CerrarReporteBtn_Click);
             // 
             // ReporteBuscarBtn
             // 
@@ -316,45 +353,77 @@
             // 
             this.TiempoDeCarga.Interval = 5000;
             // 
-            // interfasCliente1
+            // PanelReporteProveedor
             // 
-            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasCliente1.Location = new System.Drawing.Point(0, 3);
-            this.interfasCliente1.Name = "interfasCliente1";
-            this.interfasCliente1.Size = new System.Drawing.Size(318, 330);
-            this.interfasCliente1.TabIndex = 0;
+            this.PanelReporteProveedor.Controls.Add(this.dataGridView1);
+            this.PanelReporteProveedor.Controls.Add(this.textBox3);
+            this.PanelReporteProveedor.Controls.Add(this.textBox2);
+            this.PanelReporteProveedor.Controls.Add(this.textBox1);
+            this.PanelReporteProveedor.Controls.Add(this.NombreProveedor);
+            this.PanelReporteProveedor.Location = new System.Drawing.Point(0, 28);
+            this.PanelReporteProveedor.Name = "PanelReporteProveedor";
+            this.PanelReporteProveedor.Size = new System.Drawing.Size(1030, 460);
+            this.PanelReporteProveedor.TabIndex = 8;
             // 
-            // interfasProveedor1
+            // NombreProveedor
             // 
-            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
-            this.interfasProveedor1.Name = "interfasProveedor1";
-            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
-            this.interfasProveedor1.TabIndex = 0;
+            this.NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreProveedor.Location = new System.Drawing.Point(3, 5);
+            this.NombreProveedor.Name = "NombreProveedor";
+            this.NombreProveedor.Size = new System.Drawing.Size(168, 22);
+            this.NombreProveedor.TabIndex = 0;
+            this.NombreProveedor.Text = "Nombre";
+            this.NombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // CerrarReporteBtn
+            // textBox1
             // 
-            this.CerrarReporteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarReporteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CerrarReporteBtn.ForeColor = System.Drawing.Color.Red;
-            this.CerrarReporteBtn.Location = new System.Drawing.Point(874, 0);
-            this.CerrarReporteBtn.Name = "CerrarReporteBtn";
-            this.CerrarReporteBtn.Size = new System.Drawing.Size(144, 30);
-            this.CerrarReporteBtn.TabIndex = 7;
-            this.CerrarReporteBtn.Text = "Cerrar";
-            this.CerrarReporteBtn.UseVisualStyleBackColor = true;
-            this.CerrarReporteBtn.Click += new System.EventHandler(this.CerrarReporteBtn_Click);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(177, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 22);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "RNC";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(575, 5);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(188, 22);
+            this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Telefono";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(351, 5);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(218, 22);
+            this.textBox3.TabIndex = 3;
+            this.textBox3.Text = "Correo";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1021, 424);
+            this.dataGridView1.TabIndex = 4;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(1030, 503);
+            this.ClientSize = new System.Drawing.Size(1030, 485);
+            this.Controls.Add(this.PanelReporteProveedor);
             this.Controls.Add(this.PanelCliente);
             this.Controls.Add(this.PanelProveedor);
             this.Controls.Add(this.TuManagerMenu);
-            this.Controls.Add(this.PanelReportes);
+            this.Controls.Add(this.PanelReportesClientes);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -365,9 +434,12 @@
             this.TuManagerMenu.PerformLayout();
             this.PanelCliente.ResumeLayout(false);
             this.PanelProveedor.ResumeLayout(false);
-            this.PanelReportes.ResumeLayout(false);
-            this.PanelReportes.PerformLayout();
+            this.PanelReportesClientes.ResumeLayout(false);
+            this.PanelReportesClientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).EndInit();
+            this.PanelReporteProveedor.ResumeLayout(false);
+            this.PanelReporteProveedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,7 +462,7 @@
         private InterfasProveedor interfasProveedor1;
         public System.Windows.Forms.Panel PanelCliente;
         public System.Windows.Forms.Panel PanelProveedor;
-        private System.Windows.Forms.Panel PanelReportes;
+        private System.Windows.Forms.Panel PanelReportesClientes;
         private System.Windows.Forms.ToolStripDropDownButton OperacionesBtn;
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devolucionesToolStripMenuItem;
@@ -406,6 +478,12 @@
         private System.Windows.Forms.Timer TiempoDeCarga;
         private System.Windows.Forms.Button ReporteBuscarBtn;
         private System.Windows.Forms.Button CerrarReporteBtn;
+        private System.Windows.Forms.Panel PanelReporteProveedor;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NombreProveedor;
     }
 }
 
