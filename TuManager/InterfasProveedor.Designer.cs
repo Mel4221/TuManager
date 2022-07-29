@@ -34,9 +34,7 @@
             this.TelProveedor = new System.Windows.Forms.TextBox();
             this.DireccionProveedor = new System.Windows.Forms.TextBox();
             this.RNC = new System.Windows.Forms.TextBox();
-            this.ApellidoProveedor = new System.Windows.Forms.TextBox();
             this.ProveedorLbl = new System.Windows.Forms.Label();
-            this.NombreProveedor = new System.Windows.Forms.TextBox();
             this.EmpresaProveedor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -45,7 +43,7 @@
             this.CancelarRegistro.BackColor = System.Drawing.Color.Red;
             this.CancelarRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarRegistro.ForeColor = System.Drawing.Color.White;
-            this.CancelarRegistro.Location = new System.Drawing.Point(19, 295);
+            this.CancelarRegistro.Location = new System.Drawing.Point(18, 230);
             this.CancelarRegistro.Name = "CancelarRegistro";
             this.CancelarRegistro.Size = new System.Drawing.Size(125, 36);
             this.CancelarRegistro.TabIndex = 17;
@@ -58,7 +56,7 @@
             this.RegistrarClienteBtn.BackColor = System.Drawing.Color.Lime;
             this.RegistrarClienteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrarClienteBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.RegistrarClienteBtn.Location = new System.Drawing.Point(177, 295);
+            this.RegistrarClienteBtn.Location = new System.Drawing.Point(176, 230);
             this.RegistrarClienteBtn.Name = "RegistrarClienteBtn";
             this.RegistrarClienteBtn.Size = new System.Drawing.Size(125, 36);
             this.RegistrarClienteBtn.TabIndex = 16;
@@ -68,7 +66,7 @@
             // CorreoProveedor
             // 
             this.CorreoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CorreoProveedor.Location = new System.Drawing.Point(19, 256);
+            this.CorreoProveedor.Location = new System.Drawing.Point(18, 191);
             this.CorreoProveedor.Name = "CorreoProveedor";
             this.CorreoProveedor.Size = new System.Drawing.Size(283, 26);
             this.CorreoProveedor.TabIndex = 15;
@@ -78,7 +76,7 @@
             // TelProveedor
             // 
             this.TelProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TelProveedor.Location = new System.Drawing.Point(19, 224);
+            this.TelProveedor.Location = new System.Drawing.Point(18, 159);
             this.TelProveedor.Name = "TelProveedor";
             this.TelProveedor.Size = new System.Drawing.Size(283, 26);
             this.TelProveedor.TabIndex = 14;
@@ -88,7 +86,7 @@
             // DireccionProveedor
             // 
             this.DireccionProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DireccionProveedor.Location = new System.Drawing.Point(19, 192);
+            this.DireccionProveedor.Location = new System.Drawing.Point(18, 127);
             this.DireccionProveedor.Name = "DireccionProveedor";
             this.DireccionProveedor.Size = new System.Drawing.Size(283, 26);
             this.DireccionProveedor.TabIndex = 13;
@@ -98,48 +96,28 @@
             // RNC
             // 
             this.RNC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RNC.Location = new System.Drawing.Point(19, 160);
+            this.RNC.Location = new System.Drawing.Point(18, 95);
             this.RNC.Name = "RNC";
             this.RNC.Size = new System.Drawing.Size(283, 26);
             this.RNC.TabIndex = 12;
             this.RNC.Text = "RNC";
             this.RNC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ApellidoProveedor
-            // 
-            this.ApellidoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApellidoProveedor.Location = new System.Drawing.Point(19, 96);
-            this.ApellidoProveedor.Name = "ApellidoProveedor";
-            this.ApellidoProveedor.Size = new System.Drawing.Size(283, 26);
-            this.ApellidoProveedor.TabIndex = 11;
-            this.ApellidoProveedor.Text = "Apellido";
-            this.ApellidoProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // ProveedorLbl
             // 
             this.ProveedorLbl.AutoSize = true;
             this.ProveedorLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProveedorLbl.ForeColor = System.Drawing.Color.White;
-            this.ProveedorLbl.Location = new System.Drawing.Point(34, 17);
+            this.ProveedorLbl.Location = new System.Drawing.Point(44, 17);
             this.ProveedorLbl.Name = "ProveedorLbl";
             this.ProveedorLbl.Size = new System.Drawing.Size(257, 31);
             this.ProveedorLbl.TabIndex = 10;
             this.ProveedorLbl.Text = "Registrar Proveedor";
             // 
-            // NombreProveedor
-            // 
-            this.NombreProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreProveedor.Location = new System.Drawing.Point(19, 64);
-            this.NombreProveedor.Name = "NombreProveedor";
-            this.NombreProveedor.Size = new System.Drawing.Size(283, 26);
-            this.NombreProveedor.TabIndex = 9;
-            this.NombreProveedor.Text = "Nombre";
-            this.NombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // EmpresaProveedor
             // 
             this.EmpresaProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpresaProveedor.Location = new System.Drawing.Point(19, 128);
+            this.EmpresaProveedor.Location = new System.Drawing.Point(18, 63);
             this.EmpresaProveedor.Name = "EmpresaProveedor";
             this.EmpresaProveedor.Size = new System.Drawing.Size(283, 26);
             this.EmpresaProveedor.TabIndex = 18;
@@ -158,11 +136,9 @@
             this.Controls.Add(this.TelProveedor);
             this.Controls.Add(this.DireccionProveedor);
             this.Controls.Add(this.RNC);
-            this.Controls.Add(this.ApellidoProveedor);
             this.Controls.Add(this.ProveedorLbl);
-            this.Controls.Add(this.NombreProveedor);
             this.Name = "InterfasProveedor";
-            this.Size = new System.Drawing.Size(321, 362);
+            this.Size = new System.Drawing.Size(321, 285);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,9 +152,7 @@
         private System.Windows.Forms.TextBox TelProveedor;
         private System.Windows.Forms.TextBox DireccionProveedor;
         private System.Windows.Forms.TextBox RNC;
-        private System.Windows.Forms.TextBox ApellidoProveedor;
         private System.Windows.Forms.Label ProveedorLbl;
-        private System.Windows.Forms.TextBox NombreProveedor;
         private System.Windows.Forms.TextBox EmpresaProveedor;
     }
 }

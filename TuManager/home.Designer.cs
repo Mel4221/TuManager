@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.TuManagerMenu = new System.Windows.Forms.ToolStrip();
             this.PanelProveedores = new System.Windows.Forms.ToolStripDropDownButton();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OperacionesBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,15 +59,14 @@
             this.NombreBusqueda = new System.Windows.Forms.TextBox();
             this.CodigoBusqueda = new System.Windows.Forms.TextBox();
             this.ViewReportes = new System.Windows.Forms.DataGridView();
-            this.TiempoDeCarga = new System.Windows.Forms.Timer(this.components);
             this.PanelReporteProveedor = new System.Windows.Forms.Panel();
-            this.ReportesProveedor = new System.Windows.Forms.DataGridView();
             this.BuscarReportePBtn = new System.Windows.Forms.Button();
             this.CerrarReportesPBtn = new System.Windows.Forms.Button();
             this.CorreoProveedor = new System.Windows.Forms.TextBox();
             this.TelefonoProveedor = new System.Windows.Forms.TextBox();
             this.RNC = new System.Windows.Forms.TextBox();
             this.NombreProveedor = new System.Windows.Forms.TextBox();
+            this.ReportesProveedor = new System.Windows.Forms.DataGridView();
             this.PanelOperacionesVentas = new System.Windows.Forms.Panel();
             this.CerrarVentasBtn = new System.Windows.Forms.Button();
             this.CargarVentas = new System.Windows.Forms.Button();
@@ -80,22 +79,21 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.PanelProductos = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.InventarioDispositivos = new System.Windows.Forms.DataGridView();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.VerificarInventario = new System.Windows.Forms.Button();
             this.CerrarInventarioProducto = new System.Windows.Forms.Button();
+            this.VerificarInventario = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.InventarioDispositivos = new System.Windows.Forms.DataGridView();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.InventarioProveedor = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.NombreSuplidor = new System.Windows.Forms.TextBox();
-            this.SuplidorCodigo = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.CerrarSuplidoresBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SuplidorCodigo = new System.Windows.Forms.TextBox();
+            this.NombreSuplidor = new System.Windows.Forms.TextBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
@@ -147,8 +145,8 @@
             this.proveedoresToolStripMenuItem});
             this.PanelProveedores.ForeColor = System.Drawing.Color.Black;
             this.PanelProveedores.Name = "PanelProveedores";
-            this.PanelProveedores.Size = new System.Drawing.Size(73, 22);
-            this.PanelProveedores.Text = "Inventario";
+            this.PanelProveedores.Size = new System.Drawing.Size(107, 22);
+            this.PanelProveedores.Text = "Mantenimientos";
             // 
             // productosToolStripMenuItem
             // 
@@ -156,6 +154,13 @@
             this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
+            // proveedoresToolStripMenuItem
+            // 
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Text = "Suplidor";
+            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // OperacionesBtn
             // 
@@ -375,10 +380,6 @@
             this.ViewReportes.Size = new System.Drawing.Size(1024, 406);
             this.ViewReportes.TabIndex = 0;
             // 
-            // TiempoDeCarga
-            // 
-            this.TiempoDeCarga.Interval = 5000;
-            // 
             // PanelReporteProveedor
             // 
             this.PanelReporteProveedor.Controls.Add(this.BuscarReportePBtn);
@@ -392,14 +393,6 @@
             this.PanelReporteProveedor.Name = "PanelReporteProveedor";
             this.PanelReporteProveedor.Size = new System.Drawing.Size(1030, 460);
             this.PanelReporteProveedor.TabIndex = 8;
-            // 
-            // ReportesProveedor
-            // 
-            this.ReportesProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ReportesProveedor.Location = new System.Drawing.Point(3, 33);
-            this.ReportesProveedor.Name = "ReportesProveedor";
-            this.ReportesProveedor.Size = new System.Drawing.Size(1021, 424);
-            this.ReportesProveedor.TabIndex = 4;
             // 
             // BuscarReportePBtn
             // 
@@ -463,6 +456,14 @@
             this.NombreProveedor.TabIndex = 0;
             this.NombreProveedor.Text = "Nombre";
             this.NombreProveedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ReportesProveedor
+            // 
+            this.ReportesProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReportesProveedor.Location = new System.Drawing.Point(3, 33);
+            this.ReportesProveedor.Name = "ReportesProveedor";
+            this.ReportesProveedor.Size = new System.Drawing.Size(1021, 424);
+            this.ReportesProveedor.TabIndex = 4;
             // 
             // PanelOperacionesVentas
             // 
@@ -576,82 +577,6 @@
             this.PanelProductos.Size = new System.Drawing.Size(1024, 454);
             this.PanelProductos.TabIndex = 1;
             // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(0, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(114, 22);
-            this.textBox4.TabIndex = 0;
-            this.textBox4.Text = "Dispositivo";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(120, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 22);
-            this.textBox5.TabIndex = 1;
-            this.textBox5.Text = "Modelo";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(530, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 22);
-            this.textBox6.TabIndex = 2;
-            this.textBox6.Text = "Precio  Bruto";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(650, 6);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(114, 22);
-            this.textBox7.TabIndex = 3;
-            this.textBox7.Text = "Disponibles";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // InventarioDispositivos
-            // 
-            this.InventarioDispositivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.InventarioDispositivos.Location = new System.Drawing.Point(3, 33);
-            this.InventarioDispositivos.Name = "InventarioDispositivos";
-            this.InventarioDispositivos.Size = new System.Drawing.Size(1024, 421);
-            this.InventarioDispositivos.TabIndex = 4;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(240, 5);
-            this.textBox8.MaxLength = 15;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(281, 22);
-            this.textBox8.TabIndex = 5;
-            this.textBox8.Text = "IMEI";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // proveedoresToolStripMenuItem
-            // 
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.proveedoresToolStripMenuItem.Text = "Suplidor";
-            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
-            // 
-            // VerificarInventario
-            // 
-            this.VerificarInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VerificarInventario.Location = new System.Drawing.Point(769, 3);
-            this.VerificarInventario.Name = "VerificarInventario";
-            this.VerificarInventario.Size = new System.Drawing.Size(83, 27);
-            this.VerificarInventario.TabIndex = 6;
-            this.VerificarInventario.Text = "Verificar";
-            this.VerificarInventario.UseVisualStyleBackColor = true;
-            // 
             // CerrarInventarioProducto
             // 
             this.CerrarInventarioProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -664,6 +589,75 @@
             this.CerrarInventarioProducto.Text = "Cerrar";
             this.CerrarInventarioProducto.UseVisualStyleBackColor = true;
             this.CerrarInventarioProducto.Click += new System.EventHandler(this.CerrarInventarioProducto_Click);
+            // 
+            // VerificarInventario
+            // 
+            this.VerificarInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VerificarInventario.Location = new System.Drawing.Point(769, 3);
+            this.VerificarInventario.Name = "VerificarInventario";
+            this.VerificarInventario.Size = new System.Drawing.Size(83, 27);
+            this.VerificarInventario.TabIndex = 6;
+            this.VerificarInventario.Text = "Verificar";
+            this.VerificarInventario.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(240, 5);
+            this.textBox8.MaxLength = 15;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(281, 22);
+            this.textBox8.TabIndex = 5;
+            this.textBox8.Text = "IMEI";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // InventarioDispositivos
+            // 
+            this.InventarioDispositivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InventarioDispositivos.Location = new System.Drawing.Point(3, 33);
+            this.InventarioDispositivos.Name = "InventarioDispositivos";
+            this.InventarioDispositivos.Size = new System.Drawing.Size(1024, 421);
+            this.InventarioDispositivos.TabIndex = 4;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(650, 6);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(114, 22);
+            this.textBox7.TabIndex = 3;
+            this.textBox7.Text = "Disponibles";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(530, 5);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(114, 22);
+            this.textBox6.TabIndex = 2;
+            this.textBox6.Text = "Precio  Bruto";
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(120, 5);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(114, 22);
+            this.textBox5.TabIndex = 1;
+            this.textBox5.Text = "Modelo";
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(0, 5);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(114, 22);
+            this.textBox4.TabIndex = 0;
+            this.textBox4.Text = "Dispositivo";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // InventarioProveedor
             // 
@@ -678,50 +672,6 @@
             this.InventarioProveedor.Size = new System.Drawing.Size(1024, 454);
             this.InventarioProveedor.TabIndex = 10;
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 41);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(1027, 410);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // NombreSuplidor
-            // 
-            this.NombreSuplidor.Location = new System.Drawing.Point(3, 10);
-            this.NombreSuplidor.Name = "NombreSuplidor";
-            this.NombreSuplidor.Size = new System.Drawing.Size(100, 20);
-            this.NombreSuplidor.TabIndex = 1;
-            this.NombreSuplidor.Text = "Nombre";
-            this.NombreSuplidor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // SuplidorCodigo
-            // 
-            this.SuplidorCodigo.Location = new System.Drawing.Point(109, 10);
-            this.SuplidorCodigo.Name = "SuplidorCodigo";
-            this.SuplidorCodigo.Size = new System.Drawing.Size(100, 20);
-            this.SuplidorCodigo.TabIndex = 2;
-            this.SuplidorCodigo.Text = "Codigo";
-            this.SuplidorCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(215, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Codigo";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(335, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Cargar Suplidores";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // CerrarSuplidoresBtn
             // 
             this.CerrarSuplidoresBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -734,6 +684,50 @@
             this.CerrarSuplidoresBtn.Text = "Cerrar";
             this.CerrarSuplidoresBtn.UseVisualStyleBackColor = true;
             this.CerrarSuplidoresBtn.Click += new System.EventHandler(this.CerrarSuplidoresBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(335, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Cargar Suplidores";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(215, 10);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Codigo";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SuplidorCodigo
+            // 
+            this.SuplidorCodigo.Location = new System.Drawing.Point(109, 10);
+            this.SuplidorCodigo.Name = "SuplidorCodigo";
+            this.SuplidorCodigo.Size = new System.Drawing.Size(100, 20);
+            this.SuplidorCodigo.TabIndex = 2;
+            this.SuplidorCodigo.Text = "Codigo";
+            this.SuplidorCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // NombreSuplidor
+            // 
+            this.NombreSuplidor.Location = new System.Drawing.Point(3, 10);
+            this.NombreSuplidor.Name = "NombreSuplidor";
+            this.NombreSuplidor.Size = new System.Drawing.Size(100, 20);
+            this.NombreSuplidor.TabIndex = 1;
+            this.NombreSuplidor.Text = "Nombre";
+            this.NombreSuplidor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 41);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(1027, 410);
+            this.dataGridView3.TabIndex = 0;
             // 
             // Home
             // 
@@ -809,7 +803,6 @@
         private System.Windows.Forms.TextBox CorreoBusqueda;
         private System.Windows.Forms.TextBox NombreBusqueda;
         private System.Windows.Forms.TextBox CodigoBusqueda;
-        private System.Windows.Forms.Timer TiempoDeCarga;
         private System.Windows.Forms.Button ReporteBuscarBtn;
         private System.Windows.Forms.Button CerrarReporteBtn;
         private System.Windows.Forms.Panel PanelReporteProveedor;
