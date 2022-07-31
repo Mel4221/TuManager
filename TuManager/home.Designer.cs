@@ -48,7 +48,9 @@
             this.gestiónDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
             this.PanelCliente = new System.Windows.Forms.Panel();
+            this.interfasCliente1 = new TuManager.InterfasCliente();
             this.PanelProveedor = new System.Windows.Forms.Panel();
+            this.interfasProveedor1 = new TuManager.InterfasProveedor();
             this.PanelReportesClientes = new System.Windows.Forms.Panel();
             this.CerrarReporteBtn = new System.Windows.Forms.Button();
             this.ReporteBuscarBtn = new System.Windows.Forms.Button();
@@ -59,6 +61,7 @@
             this.CodigoBusqueda = new System.Windows.Forms.TextBox();
             this.ViewReportes = new System.Windows.Forms.DataGridView();
             this.PanelReporteProveedor = new System.Windows.Forms.Panel();
+            this.PanelDeVenta = new System.Windows.Forms.Panel();
             this.BuscarReportePBtn = new System.Windows.Forms.Button();
             this.CerrarReportesPBtn = new System.Windows.Forms.Button();
             this.CorreoProveedor = new System.Windows.Forms.TextBox();
@@ -93,15 +96,14 @@
             this.SuplidorCodigo = new System.Windows.Forms.TextBox();
             this.NombreSuplidor = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.PanelDeVenta = new System.Windows.Forms.Panel();
-            this.interfasCliente1 = new TuManager.InterfasCliente();
-            this.interfasProveedor1 = new TuManager.InterfasProveedor();
+            this.NombreDispositivoVenta = new System.Windows.Forms.TextBox();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
             this.PanelReportesClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).BeginInit();
             this.PanelReporteProveedor.SuspendLayout();
+            this.PanelDeVenta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesProveedor)).BeginInit();
             this.PanelOperacionesVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -264,6 +266,14 @@
             this.PanelCliente.Size = new System.Drawing.Size(322, 336);
             this.PanelCliente.TabIndex = 1;
             // 
+            // interfasCliente1
+            // 
+            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasCliente1.Location = new System.Drawing.Point(0, 3);
+            this.interfasCliente1.Name = "interfasCliente1";
+            this.interfasCliente1.Size = new System.Drawing.Size(318, 330);
+            this.interfasCliente1.TabIndex = 0;
+            // 
             // PanelProveedor
             // 
             this.PanelProveedor.Controls.Add(this.interfasProveedor1);
@@ -271,6 +281,14 @@
             this.PanelProveedor.Name = "PanelProveedor";
             this.PanelProveedor.Size = new System.Drawing.Size(325, 339);
             this.PanelProveedor.TabIndex = 1;
+            // 
+            // interfasProveedor1
+            // 
+            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
+            this.interfasProveedor1.Name = "interfasProveedor1";
+            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
+            this.interfasProveedor1.TabIndex = 0;
             // 
             // PanelReportesClientes
             // 
@@ -387,6 +405,14 @@
             this.PanelReporteProveedor.Name = "PanelReporteProveedor";
             this.PanelReporteProveedor.Size = new System.Drawing.Size(1030, 460);
             this.PanelReporteProveedor.TabIndex = 8;
+            // 
+            // PanelDeVenta
+            // 
+            this.PanelDeVenta.Controls.Add(this.NombreDispositivoVenta);
+            this.PanelDeVenta.Location = new System.Drawing.Point(3, 0);
+            this.PanelDeVenta.Name = "PanelDeVenta";
+            this.PanelDeVenta.Size = new System.Drawing.Size(1015, 451);
+            this.PanelDeVenta.TabIndex = 10;
             // 
             // BuscarReportePBtn
             // 
@@ -723,28 +749,13 @@
             this.dataGridView3.Size = new System.Drawing.Size(1027, 410);
             this.dataGridView3.TabIndex = 0;
             // 
-            // PanelDeVenta
+            // NombreDispositivoVenta
             // 
-            this.PanelDeVenta.Location = new System.Drawing.Point(3, 0);
-            this.PanelDeVenta.Name = "PanelDeVenta";
-            this.PanelDeVenta.Size = new System.Drawing.Size(1015, 451);
-            this.PanelDeVenta.TabIndex = 10;
-            // 
-            // interfasCliente1
-            // 
-            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasCliente1.Location = new System.Drawing.Point(0, 3);
-            this.interfasCliente1.Name = "interfasCliente1";
-            this.interfasCliente1.Size = new System.Drawing.Size(318, 330);
-            this.interfasCliente1.TabIndex = 0;
-            // 
-            // interfasProveedor1
-            // 
-            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
-            this.interfasProveedor1.Name = "interfasProveedor1";
-            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
-            this.interfasProveedor1.TabIndex = 0;
+            this.NombreDispositivoVenta.Location = new System.Drawing.Point(11, 14);
+            this.NombreDispositivoVenta.Name = "NombreDispositivoVenta";
+            this.NombreDispositivoVenta.Size = new System.Drawing.Size(100, 20);
+            this.NombreDispositivoVenta.TabIndex = 0;
+            this.NombreDispositivoVenta.Text = "Dispositivo";
             // 
             // Home
             // 
@@ -776,6 +787,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ViewReportes)).EndInit();
             this.PanelReporteProveedor.ResumeLayout(false);
             this.PanelReporteProveedor.PerformLayout();
+            this.PanelDeVenta.ResumeLayout(false);
+            this.PanelDeVenta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesProveedor)).EndInit();
             this.PanelOperacionesVentas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -860,6 +873,7 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devolucionesToolStripMenuItem;
         private System.Windows.Forms.Panel PanelDeVenta;
+        private System.Windows.Forms.TextBox NombreDispositivoVenta;
     }
 }
 
