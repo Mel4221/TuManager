@@ -21,6 +21,7 @@ namespace TuManager
 
             InitializeComponent();
 
+           
              
 
             ///<summary>
@@ -183,6 +184,18 @@ namespace TuManager
         private void CerrarSuplidoresBtn_Click(object sender, EventArgs e)
         {
             this.HideAll(); 
+        }
+
+        private void ventasToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.HideAll();
+           PanelOperacionesVentas.Visible = true; 
+        }
+
+        private void devolucionesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.HideAll();
+            PanelOperacionesDevoluciones.Visible = true; 
         }
 
         /*

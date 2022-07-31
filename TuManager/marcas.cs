@@ -12,8 +12,8 @@ namespace TuManager
     {
             public static string LeerLista()
         {
-            Reader.ReadFile("lista2.txt");
-            return Reader.Stored.RowData; 
+            
+            return Reader.ReadFile("lista2.txt");
         }
     }
 }

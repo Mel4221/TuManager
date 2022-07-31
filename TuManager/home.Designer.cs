@@ -36,20 +36,19 @@
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OperacionesBtn = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.venderDispositivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReportesBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.devolucionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.AdministracionBtn = new System.Windows.Forms.ToolStripDropDownButton();
             this.gestiónDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeEmpresasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SalirBtn = new System.Windows.Forms.ToolStripLabel();
             this.PanelCliente = new System.Windows.Forms.Panel();
-            this.interfasCliente1 = new TuManager.InterfasCliente();
             this.PanelProveedor = new System.Windows.Forms.Panel();
-            this.interfasProveedor1 = new TuManager.InterfasProveedor();
             this.PanelReportesClientes = new System.Windows.Forms.Panel();
             this.CerrarReporteBtn = new System.Windows.Forms.Button();
             this.ReporteBuscarBtn = new System.Windows.Forms.Button();
@@ -94,6 +93,9 @@
             this.SuplidorCodigo = new System.Windows.Forms.TextBox();
             this.NombreSuplidor = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.PanelDeVenta = new System.Windows.Forms.Panel();
+            this.interfasCliente1 = new TuManager.InterfasCliente();
+            this.interfasProveedor1 = new TuManager.InterfasProveedor();
             this.TuManagerMenu.SuspendLayout();
             this.PanelCliente.SuspendLayout();
             this.PanelProveedor.SuspendLayout();
@@ -151,46 +153,39 @@
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.proveedoresToolStripMenuItem.Text = "Suplidor";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // OperacionesBtn
             // 
             this.OperacionesBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ventasToolStripMenuItem,
-            this.devolucionesToolStripMenuItem});
+            this.venderDispositivosToolStripMenuItem});
             this.OperacionesBtn.ForeColor = System.Drawing.Color.Black;
             this.OperacionesBtn.Name = "OperacionesBtn";
             this.OperacionesBtn.Size = new System.Drawing.Size(86, 22);
             this.OperacionesBtn.Text = "Operaciones";
             // 
-            // ventasToolStripMenuItem
+            // venderDispositivosToolStripMenuItem
             // 
-            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
-            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ventasToolStripMenuItem.Text = "Ventas";
-            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
-            // 
-            // devolucionesToolStripMenuItem
-            // 
-            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
-            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.devolucionesToolStripMenuItem.Text = "Devoluciones";
-            this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click);
+            this.venderDispositivosToolStripMenuItem.Name = "venderDispositivosToolStripMenuItem";
+            this.venderDispositivosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.venderDispositivosToolStripMenuItem.Text = "Vender Dispositivos";
             // 
             // ReportesBtn
             // 
             this.ReportesBtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientesToolStripMenuItem1,
-            this.proveedoresToolStripMenuItem1});
+            this.proveedoresToolStripMenuItem1,
+            this.ventasToolStripMenuItem,
+            this.devolucionesToolStripMenuItem});
             this.ReportesBtn.Name = "ReportesBtn";
             this.ReportesBtn.Size = new System.Drawing.Size(66, 22);
             this.ReportesBtn.Text = "Reportes";
@@ -198,16 +193,30 @@
             // clientesToolStripMenuItem1
             // 
             this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // proveedoresToolStripMenuItem1
             // 
             this.proveedoresToolStripMenuItem1.Name = "proveedoresToolStripMenuItem1";
-            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.proveedoresToolStripMenuItem1.Size = new System.Drawing.Size(145, 22);
             this.proveedoresToolStripMenuItem1.Text = "Proveedores";
             this.proveedoresToolStripMenuItem1.Click += new System.EventHandler(this.proveedoresToolStripMenuItem1_Click);
+            // 
+            // ventasToolStripMenuItem
+            // 
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click_1);
+            // 
+            // devolucionesToolStripMenuItem
+            // 
+            this.devolucionesToolStripMenuItem.Name = "devolucionesToolStripMenuItem";
+            this.devolucionesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.devolucionesToolStripMenuItem.Text = "Devoluciones";
+            this.devolucionesToolStripMenuItem.Click += new System.EventHandler(this.devolucionesToolStripMenuItem_Click_1);
             // 
             // toolStripSeparator4
             // 
@@ -255,14 +264,6 @@
             this.PanelCliente.Size = new System.Drawing.Size(322, 336);
             this.PanelCliente.TabIndex = 1;
             // 
-            // interfasCliente1
-            // 
-            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasCliente1.Location = new System.Drawing.Point(0, 3);
-            this.interfasCliente1.Name = "interfasCliente1";
-            this.interfasCliente1.Size = new System.Drawing.Size(318, 330);
-            this.interfasCliente1.TabIndex = 0;
-            // 
             // PanelProveedor
             // 
             this.PanelProveedor.Controls.Add(this.interfasProveedor1);
@@ -270,14 +271,6 @@
             this.PanelProveedor.Name = "PanelProveedor";
             this.PanelProveedor.Size = new System.Drawing.Size(325, 339);
             this.PanelProveedor.TabIndex = 1;
-            // 
-            // interfasProveedor1
-            // 
-            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
-            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
-            this.interfasProveedor1.Name = "interfasProveedor1";
-            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
-            this.interfasProveedor1.TabIndex = 0;
             // 
             // PanelReportesClientes
             // 
@@ -382,6 +375,7 @@
             // 
             // PanelReporteProveedor
             // 
+            this.PanelReporteProveedor.Controls.Add(this.PanelDeVenta);
             this.PanelReporteProveedor.Controls.Add(this.BuscarReportePBtn);
             this.PanelReporteProveedor.Controls.Add(this.CerrarReportesPBtn);
             this.PanelReporteProveedor.Controls.Add(this.CorreoProveedor);
@@ -729,6 +723,29 @@
             this.dataGridView3.Size = new System.Drawing.Size(1027, 410);
             this.dataGridView3.TabIndex = 0;
             // 
+            // PanelDeVenta
+            // 
+            this.PanelDeVenta.Location = new System.Drawing.Point(3, 0);
+            this.PanelDeVenta.Name = "PanelDeVenta";
+            this.PanelDeVenta.Size = new System.Drawing.Size(1015, 451);
+            this.PanelDeVenta.TabIndex = 10;
+            // 
+            // interfasCliente1
+            // 
+            this.interfasCliente1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasCliente1.Location = new System.Drawing.Point(0, 3);
+            this.interfasCliente1.Name = "interfasCliente1";
+            this.interfasCliente1.Size = new System.Drawing.Size(318, 330);
+            this.interfasCliente1.TabIndex = 0;
+            // 
+            // interfasProveedor1
+            // 
+            this.interfasProveedor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(54)))), ((int)(((byte)(62)))));
+            this.interfasProveedor1.Location = new System.Drawing.Point(11, 3);
+            this.interfasProveedor1.Name = "interfasProveedor1";
+            this.interfasProveedor1.Size = new System.Drawing.Size(320, 336);
+            this.interfasProveedor1.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -791,9 +808,6 @@
         public System.Windows.Forms.Panel PanelCliente;
         public System.Windows.Forms.Panel PanelProveedor;
         private System.Windows.Forms.Panel PanelReportesClientes;
-        private System.Windows.Forms.ToolStripDropDownButton OperacionesBtn;
-        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem devolucionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton ReportesBtn;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem1;
@@ -841,6 +855,11 @@
         private System.Windows.Forms.TextBox SuplidorCodigo;
         private System.Windows.Forms.TextBox NombreSuplidor;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.ToolStripDropDownButton OperacionesBtn;
+        private System.Windows.Forms.ToolStripMenuItem venderDispositivosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem devolucionesToolStripMenuItem;
+        private System.Windows.Forms.Panel PanelDeVenta;
     }
 }
 
